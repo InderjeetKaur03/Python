@@ -1,0 +1,24 @@
+# Make use of documentation for in-built functions
+# The standard python library
+mylist = [1,2,3,4,5]
+help(mylist.insert)
+
+# Functions
+
+from random import shuffle
+
+## Simple Game
+
+def shuffle_list(mylist):
+ shuffle(mylist)
+ return mylist
+
+def player_guess():
+  guess=''
+  guess = input("Pick a number : 0,1,2")
+  return int(guess)
+
+my_list = ['','','','','o','','']
+mixed_list = shuffle_list(my_list)
+guess = player_guess()
+
