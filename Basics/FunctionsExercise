@@ -176,5 +176,41 @@ def ispangram(str1, alphabet=string.ascii_lowercase):
     else:
         return False
 
+'''
+Check 007 pattern in given list, numbers need not be adjacent
+'''
 
+def spy_game(nums):
+   check = [0,0,7,'a']
+   for n in nums:
+       if n==check[0]:
+           check.pop(0)
+   print(len(check)==1)
+       
+spy_game([1,2,4,0,0,7,5])
+spy_game([1,0,2,4,0,5,7])
+spy_game([1,7,2,0,4,5,0])
 
+# Count primes : ignore 0 and 1
+
+def count_primes(num):
+    # check for 1 and 2
+    if num<2:
+        return 0
+       
+    primes = [3] # Creating list of prime numbers   
+    x=3 # Conuter for numbers to check upto given numbers
+    
+    while x<=num: # iterating through all numbers upto numbers
+      for y in range(3,x,2): # check if number is prime
+         if x%y==0:
+             x=x+2
+             break
+      else:
+          primes.append(x)
+          x=x+2
+    print(primes)
+    return len(primes)
+    
+    
+count_primes(100)
