@@ -1,0 +1,9 @@
+# Advanced python modules
+
+'''
+1. Counter : Pass the list to give the number of occurences of an alphabet
+2. DefaultDict : give default value if you called a wrong key from the dictionary
+3. NamedTuple : give name to the tuple values and dont have to remember the indexes
+'''
+
+# Working with Files
