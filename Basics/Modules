@@ -7,3 +7,70 @@
 '''
 
 # Working with Files
+
+import os
+
+os.listdir()
+os.getcwd()
+os.walk() #-> gets files, folders, files
+
+#DateTime Module
+
+import datetime
+mytime = datetime.time(13,24,23)
+
+# Math Modules : round, ceil, floor, math.pi, math.nan, math.e, sin(), cos, tan,
+
+import random
+
+mylist = [1,2,3,4,5,6,7,8,9,10]
+# Random : random.seed(101)
+random.randint(0,100)
+
+# sample with replacement
+random.choices(population=mylist, k=10)
+
+# sample without replacement
+random.sample(population=mylist, k=10)
+random.shuffle(mylist)
+
+# Python Debugger pdb
+
+# Timing your code execution
+import time
+def func(n):
+    return list(map(str, range(n)))
+
+start_time = time.time()
+result = func(10000000)
+end_time = time.time()
+elapsed_time = end_time-start_time
+print(elapsed_time)
+
+import timeit
+stmnt = '''
+func(100)
+'''
+
+setup = '''
+define function here
+'''
+
+timeit.timeit(stmt,setup,number==10000)
+
+# Zipping and unzipping files
+
+f = open('fileone.txt','w+')
+f.write('One file')
+f.close()
+
+f = open('filetwo.txt','w+')
+f.write('Two file')
+f.close()
+
+import zipfile
+
+comp_file = zipfile.ZipExtFile('comp_file.zip', 'w')
+comp_file.write('fileone.txt',compress_type = zipfile.ZIP_DEFLATED)
+comp_file.close()
+
