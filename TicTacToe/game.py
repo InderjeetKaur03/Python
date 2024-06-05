@@ -5,3 +5,4 @@ def display_game(game_list):
     print(game_list)
 
 display_game(game_list)
+print('hi')
